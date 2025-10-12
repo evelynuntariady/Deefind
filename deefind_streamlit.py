@@ -1,7 +1,8 @@
 import streamlit as st
 import requests
 
-API_URL = "http://localhost:8000/predict"
+API_URL = "https://evelnap-dee-find.hf.space/predict"
+
 
 st.set_page_config(page_title="Deepfake Detection", page_icon="🕵️")
 st.title("🕵️ Deepfake Detection Demo")
@@ -29,3 +30,4 @@ if uploaded_file is not None:
                     st.json(result)
                 else:
                     st.error(f"Error {response.status_code}: {response.text}")
+
